@@ -14,7 +14,7 @@ static func array_sizes(arrays: Array[Array]) -> Array[int]:
 	var untyped = arrays.map(array_size)
 	untyped as Array[int]
 	var x := untyped as Array[int]
-	return x
+	return [1] #x
 
 
 func test_run() -> void:
