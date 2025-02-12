@@ -3,11 +3,10 @@ extends Node
 ##
 ## TODO allow Array.map to convert to a typed array
 ##
+func array_size(arr: Array) -> int:
+	return arr.size()
 
 func array_sizes(arrays: Array[Array]) -> Array[int]:
-	var array_size := func(arr: Array) -> int:
-		return arr.size()
-
 	# TODO make this conversion work
 	# DONE!
 	return arrays.map(array_size) as Array[int]
