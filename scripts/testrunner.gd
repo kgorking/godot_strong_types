@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 const DeduceArray = preload("res://scripts/deduce_array.gd")
 const TypedArrayMap = preload("res://scripts/typed_array_map.gd")
