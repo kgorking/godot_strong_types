@@ -9,14 +9,11 @@ static func array_size(arr: Array) -> int:
 
 
 static func array_sizes(arrays: Array[Array]) -> Array[int]:
-	# TODO make this conversion work like a `reinterpret_cast<>`
-	# TODO it should not make a copy, just change the type
-	var untyped = arrays.map(array_size)
-	untyped as Array[int]
-	var x := untyped as Array[int]
-	return [1] #x
+	# TODO make this conversion work
+	# DONE!
+	return arrays.map(array_size) as Array[int]
 
 
 func test_run() -> void:
 	var sizes := array_sizes([[1, 2, 3, 4, 5], ["a", "b", "c"], [".", "o", "O"]])
-	print(sizes)
+	print("Array sizes: " + str(sizes))
